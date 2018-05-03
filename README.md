@@ -66,7 +66,7 @@ class Person:
 
 ```python
 Driver.fleet_size() # returns the number of drivers in the fleet
-# example: 10
+# example: 7
 ```
 
 
@@ -79,7 +79,9 @@ Driver.fleet_size() # returns the number of drivers in the fleet
 
 ```python
 Driver.driver_names() # returns a list of driver names as strings
-# example: ["Anna", "Jeff", "Carol", "Guillaume"]
+# example: ['Helga Pataki', 'Arnold Shortman','Gerald Johanssen', 
+# "Robert 'Big Bob' Pataki", 'Grandpa Phil', 'Rhonda Wellington Lloyd',
+# 'Phoebe Heyerdahl']
 ```
 
 
@@ -98,7 +100,7 @@ Driver.driver_names() # returns a list of driver names as strings
 
 ```python
 Driver.fleet_makes() # returns a list of names car makes in the fleet
-# example: ["Toyota", "Jeep", "Honda", "Kia"]
+# example: ['Toyota', 'Toyota', 'Toyota', 'Honda', 'Jeep', 'Kia', 'Honda']
 ```
 
 
@@ -126,7 +128,7 @@ Driver.fleet_models() # returns a list of names car models in the fleet
 Driver.fleet_makes_count() 
 # returns a list of dictionaries as histograms with the key of a car make 
 # pointing to the number of cars of that make in the fleet
-# example: [{"Toyota": 8}, {"Jeep": 2}, {"Honda": 9,} {"Kia": 6}]
+# example: {'Honda': 2, 'Jeep': 1, 'Kia': 1, 'Toyota': 3}
 ```
 
 
@@ -141,7 +143,8 @@ Driver.fleet_makes_count()
 Driver.fleet_models_count() 
 # returns a list of dictionaries as histograms with the key of a car model
 # pointing to the number of cars of that model in the fleet
-# example: [{"Camry": 5}, {"Wrangler": 1}, {"Civic": 7,} {"Sonata": 3}]
+# example: {'Camry': 2, 'Civic': 1, 'Grand Cherokee': 1, 
+# 'Highlander': 1, 'Pilot': 1, 'Sonata': 1}
 ```
 
 
@@ -158,8 +161,9 @@ Driver.fleet_models_count()
 
 
 ```python
-Driver.percent_of_make("Toyota") # returns the percentage of Toyotas in the fleet
-# example: 45.7%
+Driver.percent_of_make("Toyota") 
+# returns the percentage of Toyotas in the fleet
+# example: 45.857%
 ```
 
 
