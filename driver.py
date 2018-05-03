@@ -84,7 +84,7 @@ class Driver:
         return fleet_models_histogram
 
     @classmethod
-    def percent_of_make(cls, make):
+    def percent_of_fleet(cls, make):
         fleet_makes_histogram = cls.fleet_makes_count()
         fleet_count_list = fleet_makes_histogram.values()
         total = sum(list(fleet_count_list))

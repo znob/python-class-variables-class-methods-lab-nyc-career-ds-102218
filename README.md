@@ -161,7 +161,7 @@ Driver.fleet_models_count()
 
 
 ```python
-Driver.percent_of_make("Toyota") 
+Driver.percent_of_fleet("Toyota") 
 # returns the percentage of Toyotas in the fleet
 # example: 45.857%
 ```
