@@ -30,9 +30,25 @@ We want our drivers to have the following attributes; name, car make, and car mo
 driver_one = Driver("Helga Pataki", "Toyota", "Camry")
 ```
 
-Great! Now, onto the more fun stuff. Let's create a few different instance methods that will help us answer questions like how many drivers do we currently have in our fleet? What percent of drivers drive a Toyota and of that, how many drive a Camry? Or more generally, which car make/model cars do our drivers drive?
+Great! Now, onto the more fun stuff. Let's create a few different instance methods that will help us answer questions like how many drivers do we currently have in our fleet? What percent of drivers drive a Toyota and of that, how many drive a Camry? Or more generally, which car make/models do our drivers drive?
 
 To do this, our class will need to have the two class varibles we mentioned earlier, `_all` and `_count`, as well as the class methods listed below:
+
+> **note:** although it is not necessary, feel free to use more class variables such as `_car_makes` or `_car_models`. Also, consider when is the best time to increment our `_count` class variable or add a new instance object to our `_all` list? It should be the last two lines in our `__init__` method after we have instantiated our instance object and instance variables.
+
+```python
+class Person:
+    
+    _all = []
+    -count = 0
+    
+    def __init__(self, cls, name, age):
+        self.name = name
+        self.age = age
+        # call class method to append `self` to _all
+        # call class method to increment _count by 1
+        
+```
 
 
 ```python
@@ -60,16 +76,35 @@ Driver.fleet_models() # returns a list of names car models in the fleet
 
 
 ```python
-Driver.fleet_make_count() # returns a list of dictionaries car makes in the fleet
+Driver.fleet_make_count() 
+# returns a list of dictionaries as histograms with the key of a car make 
+# pointing to the number of cars of that make in the fleet
 # example: [{"Toyota": 8}, {"Jeep": 2}, {"Honda": 9,} {"Kia": 6}]
 ```
 
-Then, let's write a class method with the `@classmethod` decorator and name it `save`. Remember, in order to reference the class, we use the parametere `cls` in our method definition in place of `self`. The `save` class method will also need to know what it is saving, so, the second argument will be the instance object we are appending to our `_all` list. Once the instance object is added to our list, it should return the newly updated `_all` list.
+
+```python
+Driver.fleet_model_count() 
+# returns a list of dictionaries as histograms with the key of a car model
+# pointing to the number of cars of that model in the fleet
+# example: [{"Camry": 5}, {"Wrangler": 1}, {"Civic": 7,} {"Sonata": 3}]
+```
 
 
 ```python
-Car.save(new_car) # [<__main__.Car object at 0x1068dd7f0>]
+Driver.percent_of_make("Toyota") # returns the percentage of Toyotas in the fleet
+# example: 45.7%
+```
+
+> **hint:** for the last method, `percent_of_make`, you will need to return a string that represents the percentage  as a float with the percent sign at the end of the string. We can use the `float()` and `str()` functions to accomplish this as well as concating strings to add the `%` sign:
+
+
+```python
+num = float((2/10)*100)
+num_string = str(num)
+percent = num_string + "%"
+percent
 ```
 
 ## Summary
-
+In this lab we practiced using class methods and class variables to both store our class's instance objects and operate on them in order to provide answers to our questions about the fleet. We might have noticed that the Driver class is getting pretty inflated with these querying methods. Perhaps there is a way we can structure our code to make this a bit cleaner for us? Maybe we could have another class that has these query methods that we use in our other classes? Let's find out!
