@@ -12,18 +12,15 @@ In this lab, we are going to put our skills to the test by creating class method
 
 Okay, so, we have a fleet of drivers and we want to be able to make queries to get details about all of these drivers. Our Driver class should have two class variables; `_all` and `_count`. The `_all` class variable should be assigned to a list that keeps track of all instance objects for the Driver class. The `_count` class variable should keep track of the number of drivers in our fleet. Initially, we wont have any drivers, so it should be set to `0`.
 
-> **note:** remember to load the autoreload extension from IPython
-```python
-%load_ext autoreload
-%autoreload 2
-```
+> **Note:** remember to re-load code from another file, we need to re-run the cell that imports it in our jupyter notebook
+
 
 
 ```python
 from driver import Driver
 ```
 
-We want our drivers to have the following attributes; name, car make, and car model. Again, by convention these attributes should have a leading underscore and be snakecased where appropriate. We will also want to define instance methods using the appropriate decorator to read (get) all of these attributes.
+We want our drivers to have the following attributes; `name`, `car_make`, and `car_model`. Again, by convention these attributes should have a leading underscore and be snakecased where appropriate. We will also want to define instance methods using the appropriate decorator to read (get) all of these attributes.
 
 
 ```python
