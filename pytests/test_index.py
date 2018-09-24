@@ -1,5 +1,13 @@
+# importing testing framwork
 import pytest
+# library used to check working virtual environment
+import importlib
+
 from driver import Driver
+
+# tests to ensure correct environment is loaded
+def test_conda_environment_activated():
+    assert importlib.util.find_spec("obscure"), "It looks like you didn't 'conda activate learn-env' - try that then run the test again!"
 
 def test_driver_class_vars():
     assert '_all' in Driver.__dict__.keys(), "The Driver class needs a class variable _all"
