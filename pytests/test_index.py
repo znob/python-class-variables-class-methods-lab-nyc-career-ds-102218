@@ -19,11 +19,13 @@ def test_fleet_size_class_method():
 
 def test_driver_names_class_method():
     assert "driver_names" in Driver.__dict__.keys(), "Missing class method 'driver_names' in the Driver class"
-    assert Driver.driver_names() == ["Terrance", "Rachel", "Jeff", "Lore"]
+    # assert Driver.driver_names() == ["Terrance", "Rachel", "Jeff", "Lore"]
+    assert true == false
 
 def test_fleet_makes_class_method():
     assert "fleet_makes" in Driver.__dict__.keys(), "Missing class method 'fleet_makes' in the Driver class"
-    assert sorted(Driver.fleet_makes()) == sorted(["Toyota", "Toyota", "Subaru", "Honda"])
+    # assert sorted(Driver.fleet_makes()) == sorted(["Toyota", "Toyota", "Subaru", "Honda"])
+    assert true == false
 
 def test_fleet_models_class_method():
     assert "fleet_models" in Driver.__dict__.keys(), "Missing class method 'fleet_models' in the Driver class"

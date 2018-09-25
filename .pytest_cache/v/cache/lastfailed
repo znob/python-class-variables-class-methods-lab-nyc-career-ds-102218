@@ -1,1 +1,4 @@
-{}
+{
+  "pytests/test_index.py::test_driver_names_class_method": true,
+  "pytests/test_index.py::test_fleet_makes_class_method": true
+}
